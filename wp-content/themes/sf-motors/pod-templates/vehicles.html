@@ -1,0 +1,128 @@
+<!-- page aside navigation -->
+<div id="global-sidenav" class="hidden-sm hidden-xs">
+  <ul>
+    <li>
+      <div class="line"></div>
+      <a href="#">Top</a>
+    </li>
+    <li>
+      <div class="line"></div>
+      <a href="#">SF7</a>
+    </li>
+    <li>
+      <div class="line"></div>
+      <a href="#">Gallery</a>
+    </li>
+    <li>
+      <div class="line"></div>
+      <a href="#">SF5</a>
+    </li>
+    <li>
+      <div class="line"></div>
+      <a href="#">Gallery</a>
+    </li>
+  </ul>
+</div>
+<section class="section page-section" id="vehicles-hero">
+  <!-- vehicles hero w/ video -->
+  <div class="hero-bg dsktp-resp-bg" style="background-image: url('{@hero_image._src}');" alt="{@hero_image_alt}" aria-label="{@hero_image_alt}" role="img"></div>
+  <!-- desktop bg above | mobile bg below -->
+  <div class="hero-bg mobile-resp-bg" style="background-image: url('{@hero_image_mobile._src}');" alt="{@hero_image_alt}" aria-label="{@hero_image_alt}"
+    role="img"></div>
+  <div class="hero-content">
+    <div id="vehicles-title">
+      <h1 class="sf-heading">{@hero_title}</h1>
+    </div>
+    <div class="vehicles-video-cta">
+      <div id="video-player-text">
+        <p>{@hero_copy}</p>
+        <h3>{@hero_video_copy}</h3>
+      </div>
+      <div id="video-player-btn"
+    onclick="javascript:handleOpenVideo('{@hero_video_source}')"
+    style="background-image: url('{@hero_play_btn}');">
+        <a href="#"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section page-section" id="vehicles-sf7">
+  <div class="sf7intro-bg dsktp-resp-bg" style="background-image: url('{@car_1_image._src}');" alt="{@car_1_image_alt}" aria-label="{@car_1_image_alt}" role="img"></div>
+  <!-- desktop bg above | mobile bg below -->
+  <div class="sf7intro-bg mobile-resp-bg" style="background-image: url('{@car_1_image_mobile._src}');" alt="{@car_1_image_alt}" aria-label="{@car_1_image_alt}" role="img"></div>
+  <!-- vehicles SF7 intro -->
+  <div class="vehicles-sf7-text">
+    <h2 class="vehicle-title">{@car_1_title}</h2>
+    <p>{@car_1_copy}</p>
+  </div>
+</section>
+
+<section class="section page-section vehicle-gallery dsktp-only sf7" id="gallery-sf7">
+  <!-- vehicles SF7 gallery -->
+  <div class="vertical-carousel-wrapper col-xs-3">
+    <!-- Gallery thumbnail scroll buttons not currently in use -->
+    <!-- <button aria-label="scroll up SF7" class="scroll-button up" style="background-image: url('https://d288wnbr8pn8n1.cloudfront.net/assets/img/global/arrowup.png');">
+    </button>
+    <button aria-label="scroll down SF7" class="scroll-button down" style="background-image: url('https://d288wnbr8pn8n1.cloudfront.net/assets/img/global/arrowdown.png');">
+    </button> -->
+    <div class="vertical-image-wrapper draggable-wrapper" style="height: 100vh; overflow-y: scroll; padding-left: 0px; padding-right: 0px;">
+      [each car_1_gallery_images]
+      <div class="gal-image sf7SelectImage" style="background-image: url('{@image._src}');"
+        alt="{@image._alt}" aria-label="{@image._alt}" role="img">
+      </div>
+      [/each]
+    </div>
+  </div>
+  <div class="row col-xs-9 image-viewer dsktp-only">
+    <div class="sf7ExpandImage" style="background-image: url('{@car_1_image._src}');"></div>
+  </div>
+</section>
+
+<section class="section page-section vehicle-gallery mobile-only sf7" id="mobile-gallery-sf7">
+  <!-- vehicles SF7 mobile gallery -->
+  [each car_1_gallery_images]
+  <div class="slide" style="background-image: url('{@image._src}');" alt="{@image._alt}" aria-label="{@image._alt}"
+    role="img">
+  </div>
+  [/each]
+</section>
+
+<section class="section page-section light" id="vehicles-sf5">
+  <!-- vehicles SF5 intro -->
+  <div class="sf5intro-bg dsktp-resp-bg" style="background-image: url('{@car_2_image._src}');" alt="{@car_2_image_alt}" aria-label="{@car_2_image_alt}" role="img"></div>
+  <!-- desktop bg above | mobile bg below -->
+  <div class="sf5intro-bg mobile-resp-bg" style="background-image: url('{@car_2_image_mobile._src}');" alt="{@car_2_image_alt}" aria-label="{@car_2_image_alt}" role="img"></div>
+  <div class="vehicles-sf5-text">
+    <h2 class="vehicle-title">{@car_2_title}</h2>
+    <h5>{@car_2_subtitle}</h5>
+    <p>{@car_2_copy}</p>
+  </div>
+</section>
+<section class="section page-section vehicle-gallery dsktp-only sf5" id="gallery-sf5">
+  <!-- vehicles SF5 gallery -->
+  <div class="row col-xs-9 image-viewer dsktp-only">
+    <div class="sf5ExpandImage" style="background-image: url('{@car_2_image._src}');"></div>
+  </div>
+  <div class="vertical-carousel-wrapper col-xs-3">
+    <!-- Gallery thumbnail scroll buttons not currently in use -->
+    <!-- <button aria-label="scroll up SF5" class="scroll-button up" style="background-image: url('https://d288wnbr8pn8n1.cloudfront.net/assets/img/global/arrowup.png');">
+    </button>
+    <button aria-label="scroll down SF5" class="scroll-button down" style="background-image: url('https://d288wnbr8pn8n1.cloudfront.net/assets/img/global/arrowdown.png');">
+    </button> -->
+    <div class="vertical-image-wrapper draggable-wrapper">
+      [each car_2_gallery_images]
+      <div class="gal-image sf5SelectImage" style="background-image: url('{@image._src}');" alt="{@image._alt}"
+        aria-label="{@image._alt}" role="img">
+      </div>
+      [/each]
+    </div>
+  </div>
+</section>
+<section class="section page-section vehicle-gallery light mobile-only sf5" id="mobile-gallery-sf5">
+  <!-- vehicles SF5 mobile gallery -->
+  [each car_2_gallery_images]
+  <div class="slide" style="background-image: url('{@image._src}');" role="img" alt="{@image._alt}" aria-label="{@image._alt}" role="img">
+  </div>
+  [/each]
+</section>

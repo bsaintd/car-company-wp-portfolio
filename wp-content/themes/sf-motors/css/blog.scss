@@ -1,0 +1,206 @@
+// Blog Stylesheet
+// Serves: Blog Template (blog.php), Single Post Template (single.php)
+
+#site-navigation {
+  background: linear-gradient(to bottom, rgba(6, 22, 59, .9) 0%, rgba(6, 22, 59, 0) 100%) !important;
+}
+
+@font-face {
+    font-family: 'ClanOffc-Book';
+    src: url('../fonts/ClanOffc-Book.ttf') format('truetype');
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #E6E6E6 !important;
+}
+
+%post-pad {
+  padding: 3.5rem 4rem;
+}
+
+%blog-txt {
+  font-weight: 600;
+  color: #333;
+}
+
+p {
+  @extend %blog-txt;
+  font-family: 'ClanOffc-Thin', sans-serif !important;
+  font-size: 1.9rem;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  @extend %blog-txt;
+  font-family: 'ClanOffc-Book', sans-serif !important;
+  text-transform: none;
+  letter-spacing: -1px;
+  padding: 0;
+  margin: 15px 0 10px;
+}
+
+h1 {font-size: 2.4rem;}
+h2 {font-size: 2.2rem;}
+h3 {font-size: 2rem;}
+h4 {font-size: 1.8rem;}
+h5 {font-size: 1.6rem;}
+h6 {font-size: 1.5rem;}
+
+// Blog/Press/Post Main Post Content Area
+.post-hero {
+  width: 100%;
+	padding-bottom: 41.25%; /* 80:33  - 1600x660 ???*/
+  position: relative;
+
+  .hero-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.post-header {
+  @extend %post-pad;
+  background-color: #1d2951; // from SF Motors contact page form
+  background-color: #06163B; // color sampled from mockup
+  margin-top: -10rem;
+
+  h1 {
+    font-family: 'Forza-thin', san-serif !important;
+    font-size: 5.5rem;
+    font-weight: 100;
+    color: #fff;
+    padding: 0 8rem 0 0;
+    margin-top: 0;
+  }
+  h2 {
+    font-family: 'ClanOffc-Book', sans-serif;
+    font-size: 2.6rem;
+    color: #fff;
+    padding: .5rem 0 0 .4rem;
+    margin-bottom: 0;
+  }
+}
+
+.post-body {
+  @extend %post-pad;
+  background-color: #fff;
+}
+
+// Blog/Press/Post Sidebar
+.blog-sidebar{
+  h2{}
+  h5{}
+  .post_tags{
+    .tag-block{
+      border: 1px solid black;
+      text-transform: uppercase;
+      color: black;
+      padding: .5em;
+      text-decoration: none;
+      display: inline-block;
+      margin: .1em;
+      font-weight: bold;
+      font-size: .75em;
+    }
+  }
+}
+.sidebar-posts {
+  background-color: #fff;
+
+  .sidebar-post-content{
+    padding:.5em;
+    h3{
+      font-size:1.15em;
+      line-height:1.25em;
+      margin:0;
+    }
+    hr{
+      width: 100px;
+      float: left;
+      margin:1em 0;
+    }
+    h5{
+      font-size:1em;
+    }
+  }
+
+  .sidebar-post-img {
+    width: 100%;
+    padding-bottom: 63%; /* 80:33  - 1600x660 ???*/
+    position: relative;
+
+    .sidebar-image-wrapper {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.sb-pagination{
+
+  ul.page-numbers{
+    list-style-type:none;
+    padding: 0;
+    margin-top:1em;
+    li{
+      span.page-numbers.current{
+        outline: 6px solid rgba(0,0,0,.15);
+        background: rgba(0,0,0,.15);
+      }
+      a{
+        text-decoration: none;
+        color: black;
+      }
+      border: 1px solid rgba(0,0,0,.15);
+      text-transform: uppercase;
+      padding: .45em;
+      text-decoration: none;
+      display: inline-block;
+      margin: .1em;
+      font-weight: bold;
+      font-size: .75em;
+      display: inline-block;
+
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .post-header {
+    margin-top: -3rem;
+
+    h1 {
+      font-size: 3rem;
+      padding: 0;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+  }
+
+  .post-header, .post-body {
+    padding: 2rem;
+  }
+}

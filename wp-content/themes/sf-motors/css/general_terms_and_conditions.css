@@ -1,0 +1,118 @@
+body {
+  background-image: url("/wp-content/uploads/2018/11/press-background.jpg");
+  background-size: 100vw;
+  background-repeat-y: repeat;
+}
+
+div#content {
+  min-height: 74vh;
+}
+
+.careers-return {
+  right: 9%;
+  position: relative;
+  font-weight: bold;
+  float: right;
+}
+
+#job-content {
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+#job-content * {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#job-content h3 {
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 28px;
+  border-bottom: 1px solid black;
+  font-weight: bold;
+}
+
+#job-content strong u {
+  font-weight: bold;
+}
+
+#job-content .job-btn {
+  border-radius: 10px;
+  right: 0;
+  top: 0;
+  color: white;
+  float: right;
+  padding: 3px 7px;
+  position: relative;
+  background-image: none !important;
+  background-color: #118bd9 !important;
+  z-index: 1001;
+  letter-spacing: 2px;
+}
+
+#job-content .job-btn:hover {
+  text-decoration: none;
+}
+
+#job-content.hide-modal {
+  display: none;
+}
+
+.main-content-area {
+  background: rgba(255, 255, 255, 0.45);
+  padding: 1em 1em 0 2em;
+}
+
+.main-content-area h3 {
+  font-size: 2rem;
+  padding-bottom: 1em;
+}
+
+.main-content-area h5.career-department {
+  font-size: 1.75rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.main-content-area .department-jobs p {
+  font-size: 1.5rem;
+}
+
+.main-content-area .department-jobs a {
+  font-weight: bold;
+}
+
+.main-content-area .department-jobs span {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .department-jobs {
+    margin-left: 1.5em;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #job-content {
+    margin: 0 auto;
+    padding: 1em;
+    max-width: 100%;
+  }
+
+  #job-content h3 {
+    font-size: 14px;
+    max-width: 95%;
+    padding-bottom: 2.5em;
+  }
+
+  #job-content h3 .job-btn {
+    clear: both;
+    width: 100%;
+    text-align: center;
+  }
+
+  .careers-return {
+    right: 3%;
+  }
+}

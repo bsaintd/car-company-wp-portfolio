@@ -1,0 +1,105 @@
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+// 2019 Q1 Refresh Typography //
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+
+// To be used as Sass @import for 2019 website refresh
+// and related content developed afterwards
+// * Also addresses and overrides rules from global.scss
+
+//-------------------------------//
+// BASE STYLING @ 1440px x 769px //
+//-------------------------------//
+
+// breakpoints
+$sm-phone: 350px;
+$phone: 474px;
+$tablet-min: 768px;
+$mid-tablet: 991px;
+$sm-tablet: 576px;
+
+$above-phone: $phone + 1px;
+$below-tablet: $tablet-min - 1px;
+$above-mid-tablet: $mid-tablet + 1px;
+
+h1.sf-heading, h2.sf-heading {
+  font-family: 'Nanami-XLT-Oblique', sans-serif;
+  font-size: 50px;
+  letter-spacing: 2px;
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  font-family: 'Forza-Book', sans-serif;
+  font-size: 48px;
+  letter-spacing: 0;
+  padding: 0;
+}
+
+h3 {
+  font-family: 'ClanOffc-Book', sans-serif;
+  font-size: 24px;
+  letter-spacing: 0;
+}
+
+body, p, .cta-button {
+  font-family: 'ClanOffc-Book', sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+// responsive
+@media only screen and (max-width: $below-tablet) {
+  h1.sf-heading, h2.sf-heading {
+    font-size: 30px;
+    letter-spacing: 1px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  body, p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  @media only screen and (max-width: $phone) {
+    h1.sf-heading, h2.sf-heading {
+      font-size: 40px;
+    }
+
+    h2 {
+      font-size: 25px;
+    }
+    @media only screen and (max-width: $sm-phone) {
+      h1, h2 {
+        &.sf-heading{
+          font-size: 36px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet-min) {
+  @media only screen and (max-width: $mid-tablet) {
+    h1.sf-heading, h2.sf-heading {
+      font-size: 40px;
+    }
+
+    @media only screen and (max-height: $sm-tablet) and (orientation: landscape) {
+      h1.sf-heading, h2.sf-heading {
+        font-size: 36px;
+      }
+
+      h3 {
+        font-size: 20px;
+      }
+    } // end (max-height: 576px) and (orientation: landscape)
+  } // end (max-width: 991px)
+} // end (min-width: 768px)

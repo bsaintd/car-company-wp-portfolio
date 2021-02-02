@@ -1,0 +1,81 @@
+@import "./_mixins.scss";
+
+#global-sidenav {
+    @include transition-mix($duration: .7s);
+    $light: #fff;
+    $dark: #222;
+    $accent: #6f84a5;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-flow: column nowrap;
+    z-index:8888;
+
+    &.dark{
+        ul {
+
+            border-color: $dark;
+        }
+        li .line{
+            border-color: $dark;
+        }
+        a {
+            color: $dark;
+        }
+    }
+
+    ul{
+        list-style-type: none;
+        margin-right: 7px;
+        border-right: 1px solid $light;
+    }
+    li {
+        text-align: right;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: 500;
+        margin: 1em 8px 1em 0;
+
+        .line{
+            position: relative;
+            left: calc(100% + 5px);
+            top: 8px;
+            height: 50%;
+            width: 4px;
+            border-bottom: 1px solid $light;
+
+        }
+
+        a{ 
+            display:block;
+            height: 12px;
+            color: $light;
+            &:hover{
+                text-decoration: none;
+                color: $accent;
+            }
+            &:active, &:visited, &:focus{
+                text-decoration: none;
+            }
+
+        }
+        background-color: transparent;
+        &::before {
+            color: white;
+            transition: color 170ms ease-out, width 170ms ease-out;
+        }
+        &.is-active {
+            /*color: white;*/
+            a{
+                /*color: white;*/
+                font-size: 13px;
+                font-weight: bolder;
+            }
+            &::before {
+                color: white;
+            }
+        }
+    }
+}

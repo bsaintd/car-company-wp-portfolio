@@ -1,0 +1,377 @@
+@import "./_video_modal.scss";
+@import "./_mixins.scss";
+@import "./_typography_2019.scss";
+.section{
+  overflow: hidden;
+}
+.desktop-background,
+.mobile-background {
+  display: none;
+  position: absolute;
+  @include bg-centered-covered;
+  @include fill-parent;
+}
+
+.hero,
+.section-1 {
+  .title-group,
+  .copy-group {
+    position: absolute;
+  }
+}
+
+.cta-button {
+  cursor: pointer;
+}
+
+.hero {
+  $copy-cta-top: 25%;
+  .title-group {
+    top: $copy-cta-top - 10%;
+    width: 80%;
+    @include dead-center-x-axis;
+    text-align: center;
+    h1 {
+      color: #000;
+    }
+  }
+  .copy-group {
+    width: 25em;
+    margin-left: 5em;
+    top: $copy-cta-top;
+  }
+  .cta-group {
+    h3 {
+      margin: 0;
+    }
+    top: $copy-cta-top;
+    color: #000;
+    @include dead-center-x-axis;
+  }
+  .cta-button {
+    width: 58px;
+    height: 58px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 10px auto 0;
+    &.light {
+      display: none;
+    }
+    &.dark {
+      display: none;
+    }
+  }
+}
+
+.section-1 {
+  h1,
+  h2,
+  p,
+  .cta-button {
+    color: #fff;
+  }
+  .cta-button {
+    padding: 0.5em 0;
+    text-align: center;
+    border: 2px solid #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+}
+
+$end-of-header: 17vh;
+
+.section-2{
+  .title-group {
+    height: $end-of-header;
+    width: 100%;
+    background-color: #000;
+    h2 {
+      @include dead-center-x-axis;
+      transform: translate(-50%, -50%);
+      padding-top: unset;
+      text-align: center;
+      color: white;
+    }
+  }
+  .photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    .picture {
+      @include bg-centered-covered;
+      .testimonial{
+        color: white;
+        position: relative;
+        width: 100%;
+        background-color: rgba(26,26,26, .75);
+        text-align: center;
+        .description{
+          padding: 1em;
+        }
+        .name{
+          color: #999;
+          margin-top: 1em;
+          padding: 1em;
+          font-size: 1em;
+          position: absolute;
+          width: 100%;
+          bottom: 33%;
+        }
+        .subheading{
+          position: absolute;
+          bottom: 0;
+          div {
+            @include dead-center-item;
+            width: 80%;
+            font-family: 'ClanOffc-Book', sans-serif;
+            font-size: 1.8em;
+            line-height: 1.1em;
+            text-transform: uppercase;
+          }
+          width: 100%;
+          background-color: black;
+          height: 6em;
+        }
+
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 474px) {
+  .mobile-background {
+    display: block;
+  }
+  .hero {
+    h1,
+    .copy-group,
+    h3 {
+      text-align: center;
+    }
+    .copy-group {
+      position: absolute;
+      left: 50%;
+      top: 40%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      margin: 0 auto;
+    }
+    .cta-group {
+      top: unset;
+      bottom: 2em;
+      width: 80%;
+      h3 {
+        color: white;
+      }
+    }
+    .cta-button.light {
+      display: block;
+    }
+  }
+  .section-1 {
+    .copy-group {
+      @include dead-center-x-axis;
+      top: 10vh;
+      margin: 0 auto;
+      text-align: center;
+      width: 80%;
+    }
+  }
+
+  @media only screen and (max-width: 350px){
+    .hero h1 { font-size: 34px; }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .section-2 {
+    $end-of-header: 20vh;
+    .title-group{
+      height: $end-of-header;
+      h2{
+        top: $end-of-header / 2;
+      }
+    }
+    .photo-grid{
+      flex-direction: column;
+      height:unset;
+      .testimonial{
+        height: 100% * 2 / 5;
+        top: 100% * 3 / 5;
+      }
+      .description{
+        width: 80%;
+        margin: 0 auto;
+      }
+      .picture{
+        height: 100vh;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-height: 474px) {
+  .hero {
+    height: 150vh !important;
+    .desktop-background {
+      background-position: left, top;
+      background-size: 170%;
+    }
+    .title-group {
+      top: 20%;
+    }
+
+    .cta-button {
+      height: 35px;
+      width: 35px;
+    }
+    .cta-group {
+      @include dead-center-x-axis;
+      top: 30%;
+      h3 {
+        color: #000;
+      }
+      .cta-button.light {
+        display: none;
+      }
+      .cta-button.dark {
+        display: block;
+      }
+    }
+    .copy-group {
+      width: 30vw;
+      margin-left: 5vw;
+      top: 35%;
+    }
+  }
+
+  .section-1 {
+    .copy-group {
+      @include dead-center-y-axis;
+      h1 {
+        padding: unset;
+      }
+    }
+  }
+
+  .section-2{
+    .title-group{
+      height: 25vh;
+      h2{
+        top: 13.3vh;
+      }
+    }
+    .photo-grid {
+      flex-direction: row;
+      .picture{
+        position: relative;
+        height: 180vh;
+        width: 50%;
+        .testimonial{
+          position: absolute;
+          top: unset;
+          bottom: 0;
+          height: 55%;
+          .description{
+            width: 65%;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 475px) and (max-width: 1166px){
+  .hero{
+    .copy-group{
+      width: 13em;
+      margin-left: 3em;
+    }
+  }
+}
+@media only screen and (min-width: 475px) {
+  .desktop-background {
+    display: block;
+  }
+  .hero {
+    .cta-group {
+      h3 {
+        color: #000;
+      }
+      .cta-button.dark {
+        display: block;
+      }
+    }
+  }
+
+  .section-1 {
+    .copy-group {
+      top: 10em;
+      margin-left: 5em;
+      p {
+        width: 25em;
+      }
+      .cta-button {
+        width: 20em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 475px) and (min-height: 475px) {
+  .section-2{
+    h2 {
+      top: $end-of-header / 1.4;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1165px) and (min-height: 475px) {
+  .section-2 {
+    .photo-grid {
+      flex-direction: row;
+      .picture{
+        height: 100vh;
+        width: 50%;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  .testimonial{
+    height: 100% * 2 / 5;
+    top: 100% * 3 / 5;
+  }
+}
+
+@media only screen and (min-width: 1166px) {
+  .photo-grid{
+    .picture{
+      height: 100vh - $end-of-header;
+      width: 25%;
+    }
+  }
+}
+
+@media only screen and (min-width: 1166px) and (max-width: 1400px) {
+  .photo-grid{
+    .picture{
+      $top: 50%;
+      .testimonial{
+        height: 100% - $top;
+        top: $top;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1401px) {
+  $top: 60%;
+  .testimonial{
+    height: 100% - $top;
+    top: $top;
+  }
+}

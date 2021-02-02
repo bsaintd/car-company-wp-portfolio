@@ -1,0 +1,231 @@
+#site-navigation {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(6, 22, 59, 0.9)), to(rgba(6, 22, 59, 0))) !important;
+  background: linear-gradient(to bottom, rgba(6, 22, 59, 0.9) 0%, rgba(6, 22, 59, 0) 100%) !important;
+}
+
+@font-face {
+  font-family: 'ClanOffc-Book';
+  src: url("../fonts/ClanOffc-Book.ttf") format("truetype");
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #E6E6E6 !important;
+}
+
+.post-header,
+.post-body {
+  padding: 3.5rem 4rem;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  color: #333;
+}
+
+p {
+  font-family: 'ClanOffc-Thin', sans-serif !important;
+  font-size: 1.9rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'ClanOffc-Book', sans-serif !important;
+  text-transform: none;
+  letter-spacing: -1px;
+  padding: 0;
+  margin: 15px 0 10px;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+h5 {
+  font-size: 1.6rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
+.post-hero {
+  width: 100%;
+  padding-bottom: 41.25%;
+  /* 80:33  - 1600x660 ???*/
+  position: relative;
+}
+
+.post-hero .hero-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.post-hero .hero-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.post-header {
+  background-color: #1d2951;
+  background-color: #06163B;
+  margin-top: -10rem;
+}
+
+.post-header h1 {
+  font-family: 'Forza-thin', san-serif !important;
+  font-size: 5.5rem;
+  font-weight: 100;
+  color: #fff;
+  padding: 0 8rem 0 0;
+  margin-top: 0;
+}
+
+.post-header h2 {
+  font-family: 'ClanOffc-Book', sans-serif;
+  font-size: 2.6rem;
+  color: #fff;
+  padding: .5rem 0 0 .4rem;
+  margin-bottom: 0;
+}
+
+.post-body {
+  background-color: #fff;
+}
+
+.blog-sidebar .post_tags .tag-block {
+  border: 1px solid black;
+  text-transform: uppercase;
+  color: black;
+  padding: .5em;
+  text-decoration: none;
+  display: inline-block;
+  margin: .1em;
+  font-weight: bold;
+  font-size: .75em;
+}
+
+.sidebar-posts {
+  background-color: #fff;
+}
+
+.sidebar-posts .sidebar-post-content {
+  padding: .5em;
+}
+
+.sidebar-posts .sidebar-post-content h3 {
+  font-size: 1.15em;
+  line-height: 1.25em;
+  margin: 0;
+}
+
+.sidebar-posts .sidebar-post-content hr {
+  width: 100px;
+  float: left;
+  margin: 1em 0;
+}
+
+.sidebar-posts .sidebar-post-content h5 {
+  font-size: 1em;
+}
+
+.sidebar-posts .sidebar-post-img {
+  width: 100%;
+  padding-bottom: 63%;
+  /* 80:33  - 1600x660 ???*/
+  position: relative;
+}
+
+.sidebar-posts .sidebar-post-img .sidebar-image-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.sidebar-posts .sidebar-post-img .sidebar-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.sb-pagination ul.page-numbers {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 1em;
+}
+
+.sb-pagination ul.page-numbers li {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  text-transform: uppercase;
+  padding: .45em;
+  text-decoration: none;
+  display: inline-block;
+  margin: .1em;
+  font-weight: bold;
+  font-size: .75em;
+  display: inline-block;
+}
+
+.sb-pagination ul.page-numbers li span.page-numbers.current {
+  outline: 6px solid rgba(0, 0, 0, 0.15);
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.sb-pagination ul.page-numbers li a {
+  text-decoration: none;
+  color: black;
+}
+
+@media only screen and (max-width: 767px) {
+  .post-header {
+    margin-top: -3rem;
+  }
+
+  .post-header h1 {
+    font-size: 3rem;
+    padding: 0;
+  }
+
+  .post-header h2 {
+    font-size: 2rem;
+  }
+
+  .post-header,
+  .post-body {
+    padding: 2rem;
+  }
+}

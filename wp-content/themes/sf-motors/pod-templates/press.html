@@ -1,0 +1,140 @@
+<div id="global-sidenav" class="hidden-sm hidden-xs">
+  <ul>
+    <li>
+        <div class="line"></div>
+        <a href="#{@hero_navigation_anchor}">{@hero_navigation_link}</a>
+    </li>
+    <li>
+        <div class="line"></div>
+        <a href="#{@section_1_navigation_anchor}">{@section_1_navigation_link}</a>
+    </li>
+    <li>
+        <div class="line"></div>
+        <a href="#{@section_2_navigation_anchor}">{@section_2_navigation_link}</a>
+    </li>
+    </ul>
+</div>
+
+<section
+  class="section page-section hero light" id="{@hero_navigation_anchor}">
+  <div
+    class="desktop-background"
+    style="background-image: url('{@hero_background._src}');"
+    alt="{@hero_bg_image_alt_text}"
+    aria-label="{@hero_bg_image_alt_text}"
+    role="img">
+  </div>
+  <div
+    class="mobile-background"
+    style="background-image: url('{@hero_mobile_background._src}');"
+    alt="{@hero_bg_image_alt_text}"
+    aria-label="{@hero_bg_image_alt_text}"
+    role="img">
+  </div>
+  <div class="section-content">
+    <div class="title-group">
+      <h1 class="sf-heading">{@hero_heading}</h1>
+    </div>
+    <div class="copy-group">
+        <p>{@hero_copy}</p>
+    </div>
+  </div>
+</section>
+
+<section
+  class="section page-section light section-1" id="{@section_1_navigation_anchor}">
+  <div
+    class="desktop-background"
+    style="background-image: url('{@section_1_background._src}');"
+    alt="{@section_1_bg_image_alt_text}"
+    aria-label="{@section_1_bg_image_alt_text}"
+    role="img">
+  </div>
+  <div
+    class="mobile-background"
+    style="background-image: url('{@section_1_mobile_background._src}');"
+    alt="{@section_1_bg_image_alt_text}"
+    aria-label="{@section_1_bg_image_alt_text}"
+    role="img">
+  </div>
+  <div class="section-content">
+    <div class="title-group">
+      <h2 class="sf-heading">{@section_1_heading}</h2>
+    </div>
+    <div class="copy-group">
+      <p>{@section_1_copy}</p>
+      <a href="{@section_1_cta_link}">
+        <div class="cta-button">{@section_1_cta_text}</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section page-section section-2" id="{@section_2_navigation_anchor}">
+  <div
+    class="desktop-background"
+    style="background-image: url('{@section_2_background._src}');"
+    alt="{@section_2_bg_image_alt_text}"
+    aria-label="{@section_2_bg_image_alt_text}"
+    role="img">
+  </div>
+  <div
+    class="mobile-background"
+    style="background-image: url('{@section_2_mobile_background._src}');"
+    alt="{@section_2_bg_image_alt_text}"
+    aria-label="{@section_2_bg_image_alt_text}"
+    role="img">
+  </div>
+  <div class="section-content">
+    <div class="title-group">
+        <h2 class="sf-heading">{@section_2_heading}</h2>
+        <h3><a href="mailto:{@section_2_subheading_contact_link}">{@section_2_subheading_contact_text}</a></h3>
+    </div>
+    <div class="copy-group">
+      <h3>{@section_2_copy_heading}</h3>
+      <p>{@section_2_copy}</p>
+    </div>
+    <div class="media-grid">
+      <div class="item">
+        <div class="box">
+          <img src="{@section_2_download_img_1}"
+            alt="{@section_2_download_img_alt_text_1}"
+            aria-label="{@section_2_download_img_alt_text_1}">
+        </div>
+        <a href="{@section_2_download_link_1}">
+          <div class="cta-button">{@section_2_download_text_1}</div>
+        </a>
+      </div>
+      <div class="item">
+        <div class="box">
+          <img src="{@section_2_download_img_2}"
+            alt="{@section_2_download_img_alt_text_2}"
+            aria-label="{@section_2_download_img_alt_text_2}">
+        </div>
+        <a href="{@section_2_download_link_2}">
+          <div class="cta-button">{@section_2_download_text_2}</div>
+        </a>
+      </div>
+      <div class="item">
+        <div class="box">
+          <img src="{@section_2_download_img_3}"
+            alt="{@section_2_download_img_alt_text_3}"
+            aria-label="{@section_2_download_img_alt_text_3}">
+        </div>
+        <a href="{@section_2_download_link_3}">
+          <div class="cta-button">{@section_2_download_text_3}</div>
+        </a>
+      </div>
+      <div class="item">
+        <div class="box">
+          <img src="{@section_2_download_img_4}"
+            alt="{@section_2_download_img_alt_text_4}"
+            aria-label="{@section_2_download_img_alt_text_4}">
+        </div>
+        <a href="{@section_2_download_link_4}">
+          <div class="cta-button">{@section_2_download_text_4}</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,245 @@
+<!-- page aside navigation -->
+<div id="global-sidenav" class="hidden-sm hidden-xs">
+  <ul>
+    <li>
+        <div class="line"></div>
+        <a href="#{@hero_navigation_anchor}">{@hero_navigation_link}</a>
+    </li>
+    <li>
+        <div class="line"></div>
+        <a href="#{@section_1_nav_anchor}">{@section_1_nav_link}</a>
+    </li>
+    <li>
+        <div class="line"></div>
+        <a href="#{@section_2_nav_anchor}">{@section_2_nav_link}</a>
+    </li>
+    <li>
+        <div class="line"></div>
+        <a href="#{@section_3_nav_anchor}">{@section_3_nav_link}</a>
+    </li>
+    <li>
+        <div class="line"></div>
+        <a href="#{@section_4_nav_anchor}">{@section_4_nav_link}</a>
+    </li>
+  </ul>
+</div>
+<section class="section page-section" id="hero">
+  <div
+    class="dsktp-bg"
+    style="background-image: url('{@hero_bg_image._src}');"
+    alt="{@hero_bg_image_alt_text}"
+    aria-label="{@hero_bg_image_alt_text}"
+    role="img">
+  </div>
+  <!-- desktop bg above | mobile bg below -->
+  <div
+    class="mobile-bg"
+    style="background-image: url('{@hero_bg_image_mobile._src}');"
+    alt="{@hero_bg_image_alt_text}"
+    aria-label="{@hero_bg_image_alt_text}"
+    role="img">
+  </div>
+  <div class="title-group">
+    <h1 class="sf-heading">{@hero_heading_title}</h1>
+    <h1 class="sf-heading">{@hero_heading_2}</h1>
+  </div>
+  <div id="home-video-cta">
+    <div id="video-player-text">
+      <h3>{@hero_video_copy}</h3>
+    </div>
+    <div id="video-player-btn"
+      onclick="javascript:handleOpenVideo('{@hero_video_source}')"
+      style="background-image: url('{@hero_play_btn}');">
+      <a href="#"></a>
+    </div>
+  </div>
+</section>
+
+<section class="section page-section" id="section-1">
+  <div
+    class="dsktp-bg"
+    style="background-image: url('{@section_1_bg_image._src}')"
+    alt="{@section_1_bg_image_alt_text}"
+    aria-label="{@section_1_bg_image_alt_text}"
+    role="img">
+  </div>
+  <!-- desktop bg above | mobile bg below -->
+  <div
+    class="mobile-bg"
+    style="background-image: url('{@section_1_bg_image_mobile._src}');"
+    alt="{@section_1_bg_image_alt_text}"
+    aria-label="{@section_1_bg_image_alt_text}"
+    role="img">
+  </div>
+  <div class="title-group">
+      <h2 class="sf-heading">{@section_1_heading}</h2>
+      <h3>{@section_1_subheading}</h3>
+  </div>
+  <div class="copy-group">
+    <p>{@section_1_copy}</p>
+    <a href="{@section_1_cta_link}">
+      <div class="cta-button">{@section_1_cta_txt}</div>
+    </a>
+  </div>
+</section>
+
+<section class="section page-section" id="section-2">
+  <div
+    class="dsktp-bg"
+    style="background-image: url('{@section_2_bg_image._src}')"
+    alt="{@section_2_bg_image_alt_text}"
+    aria-label="{@section_2_bg_image_alt_text}"
+    role="img">
+  </div>
+  <!-- desktop bg above | mobile bg below -->
+  <div
+    class="mobile-bg"
+    style="background-image: url('{@section_2_bg_image_mobile._src}');"
+    alt="{@section_2_bg_image_alt_text}"
+    aria-label="{@section_2_bg_image_alt_text}"
+    role="img">
+  </div>
+  <div class="section-content">
+    <div class="title-group">
+      <h2 class="sf-heading">{@section_2_heading}</h2>
+    </div>
+    <div class="copy-group">
+      <p>{@section_2_copy}</p>
+      <a href="{@section_2_cta_link}">
+        <div class="cta-button">{@section_2_cta_txt}</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section light" id="section-3">
+  <div
+    class="dsktp-bg"
+    style="background-image: url('{@section_3_bg_image._src}')"
+    alt="{@section_3_bg_image_alt_text}"
+    aria-label="{@section_3_bg_image_alt_text}"
+    role="img">
+  </div>
+  <!-- desktop bg above | mobile bg below -->
+  <div
+    class="mobile-bg"
+    style="background-image: url('{@section_3_bg_image_mobile._src}');"
+    alt="{@section_3_bg_image_alt_text}"
+    aria-label="{@section_3_bg_image_alt_text}"
+    role="img">
+  </div>
+  <div class="sfm-map-container">
+    [mapplic id="1623 " h="747"]
+  </div>
+  <div class="mobile-accordion">
+    <ul class="accordion">
+      <li>
+        <a class="toggle" href=#>{@location_name_1}<span class="caret"></span> </a>
+        <div class="inner">
+          <p>{@location_city_1}</p>
+          <div class="location-image"
+          style="background-image: url('{@location_picture_1}')"></div>
+          <p>
+            {@location_description_1}
+          </p>
+        </div>
+      </li>
+      <li>
+        <a class="toggle" href=#>{@location_name_2}<span class="caret"></span></a>
+        <div class="inner">
+          <p>{@location_city_2}</p>
+          <div class="location-image"
+          style="background-image: url('{@location_picture_2}')"></div>
+          <p>
+            {@location_description_2}
+          </p>
+        </div>
+      </li>
+      <li>
+        <a class="toggle" href=#>{@location_name_3}<span class="caret"></span></a>
+        <div class="inner">
+          <p>{@location_city_3}</p>
+          <div class="location-image"
+          style="background-image: url('{@location_picture_3}')"></div>
+          <p>
+            {@location_description_3}
+          </p>
+        </div>
+      </li>
+      <li>
+        <a class="toggle" href=#>{@location_name_4}<span class="caret"></span></a>
+        <div class="inner">
+          <p>{@location_city_4}</p>
+          <div class="location-image"
+          style="background-image: url('{@location_picture_4}')"></div>
+          <p>
+            {@location_description_4}
+          </p>
+        </div>
+      </li>
+      <li>
+        <a class="toggle" href=#>{@location_name_5}<span class="caret"></span></a>
+        <div class="inner">
+          <p>{@location_city_5}</p>
+          <div class="location-image"
+          style="background-image: url('{@location_picture_5}')"></div>
+          <p>
+            {@location_description_5}
+          </p>
+        </div>
+      </li>
+      <li>
+        <a class="toggle" href=#>{@location_name_6}<span class="caret"></span></a>
+        <div class="inner">
+          <p>{@location_city_6}</p>
+          <div class="location-image"
+          style="background-image: url('{@location_picture_6}')"></div>
+          <p>
+            {@location_description_6}
+          </p>
+        </div>
+      </li>
+      <li>
+        <a class="toggle" href=#>{@location_name_7}<span class="caret"></span></a>
+        <div class="inner">
+          <p>{@location_city_7}</p>
+          <div class="location-image"
+          style="background-image: url('{@location_picture_7}')"></div>
+          <p>
+            {@location_description_7}
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section page-section" id="section-4">
+  <div
+    class="dsktp-bg"
+    style="background-image: url('{@section_4_bg_image._src}')"
+    alt="@section_4_bg_image_alt_text"
+    aria-label="@section_4_bg_image_alt_text"
+    role="img">
+  </div>
+  <!-- desktop bg above | mobile bg below -->
+  <div
+    class="mobile-bg"
+    style="background-image: url('{@section_4_bg_image_mobile._src}');"
+    alt="@section_4_bg_image_alt_text"
+    aria-label="@section_4_bg_image_alt_text"
+    role="img">
+  </div>
+  <div class="section-content">
+    <div class="title-group">
+      <h2 class="sf-heading">{@section_4_heading}</h2>
+      <h3>{@section_4_subheading}</h3>
+    </div>
+    <div class="copy-group">
+      <p>{@section_4_copy}</p>
+      <a href="{@section_4_cta_link}">
+        <!-- <div class="cta-button">{@section_4_cta_txt}</div> -->
+      </a>
+    </div>
+  </div>
+</section>

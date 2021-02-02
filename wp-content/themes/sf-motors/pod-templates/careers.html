@@ -1,0 +1,137 @@
+<div id="global-sidenav" class="hidden-sm hidden-xs">
+  <ul>
+    <li>
+      <div class="line"></div>
+      <a href="#{@navigation_anchor}">{@hero_navigation_link}</a>
+    </li>
+    <li>
+      <div class="line"></div>
+      <a href="#{@section_1_navigation_anchor}">{@section_1_navigation_link}</a>
+    </li>
+    <li>
+      <div class="line"></div>
+      <a href="#{@section_2_navigation_anchor}">{@section_2_navigation_link}</a>
+    </li>
+  </ul>
+</div>
+<section class="section page-section hero light">
+  <div
+    class="desktop-background"
+    style="background-image: url('{@hero_background._src}');"
+    alt=""
+    aria-label=""
+    role="img"
+  ></div>
+  <div
+    class="mobile-background"
+    style="background-image: url('{@hero_mobile_background._src}');"
+  ></div>
+  <div class="title-group"><h1 class="sf-heading">{@hero_heading}</h1></div>
+  <div class="copy-group">{@hero_copy}</div>
+  <div
+    class="cta-group"
+    onclick="javascript:handleOpenVideo('{@hero_video_url}')"
+  >
+    <h3>{@hero_cta_text}</h3>
+    <div
+      class="cta-button dark"
+      style="background-image: url('{@hero_play_button_dark._src}');"
+    ></div>
+    <div
+      class="cta-button light"
+      style="background-image: url('{@hero_play_button_light._src}');"
+    ></div>
+  </div>
+</section>
+
+<section class="section page-section section-1" role="img">
+  <div
+    class="desktop-background"
+    style="background-image: url('{@section_1_background._src}');"
+    alt=""
+    aria-label=""
+    role="img"
+  ></div>
+  <div
+    class="mobile-background"
+    style="background-image: url('{@section_1_mobile_background._src}');"
+  ></div>
+  <!-- <div class="title-group">
+  </div> -->
+  <div class="copy-group">
+    <h2 class="sf-heading">{@section_1_heading}</h2>
+    <p>{@section_1_copy}</p>
+    <a href="{@section_1_cta_link}">
+      <div class="cta-button">{@section_1_cta_text}</div>
+    </a>
+  </div>
+</section>
+
+<section
+  class="section page-section section-2 fp-auto-height"
+  alt=""
+  aria-label=""
+  role="img"
+>
+  <div class="title-group">
+    <h2 class="sf-heading">{@section_2_heading}</h2>
+  </div>
+  <div class="photo-grid">
+    <div
+      class="picture picture-1"
+      style="background-image: url('{@employee_picture_1._src}');"
+    >
+      <div class="testimonial">
+        <div class="description">{@employee_paragraph_1}</div>
+        <div class="name">- {@employee_name_1}</div>
+        <div class="subheading">
+          <div>
+            {@employee_subheading_1}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="picture picture-2"
+      style="background-image: url('{@employee_picture_2._src}');"
+    >
+      <div class="testimonial">
+        <div class="description">{@employee_paragraph_2}</div>
+        <div class="name">- {@employee_name_2}</div>
+        <div class="subheading">
+          <div>
+            {@employee_subheading_2}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="picture picture-3"
+      style="background-image: url('{@employee_picture_3._src}');"
+    >
+      <div class="testimonial">
+        <div class="description">{@employee_paragraph_3}</div>
+        <div class="name">- {@employee_name_3}</div>
+        <div class="subheading">
+          <div>
+            {@employee_subheading_3}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="picture picture-4"
+      style="background-image: url('{@employee_picture_4._src}');"
+    >
+      <div class="testimonial">
+        <div class="description">{@employee_paragraph_4}</div>
+        <div class="name">- {@employee_name_4}</div>
+        <div class="subheading">
+          <div>
+            {@employee_subheading_4}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

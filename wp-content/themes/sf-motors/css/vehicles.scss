@@ -1,0 +1,417 @@
+//------------------------------------//
+// Vehicles Page 2019 Refresh Styling //
+//------------------------------------//
+// imports
+@import "./_mixins.scss";
+@import "./_video_modal.scss";
+@import "./_typography_2019.scss";
+
+//-------------------------------//
+// BASE STYLING @ 1440px x 769px //
+//-------------------------------//
+
+$responsive: 768px;
+$landscape: 475px;
+$above-responsive:  $responsive + 1px;
+$above-landscape:  $landscape + 1px;
+// hero
+.hero-bg {
+  position: absolute;
+  background-position: right center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.hero-content {
+  position: absolute;
+  top: 25%;
+  right: 10%;
+  bottom: 0;
+  width: 40%;
+  text-align: center;
+
+  h1, #video-player-text {
+    color: #fff;
+  }
+
+  p {
+    padding: 0 10%;
+  }
+
+  #video-player-btn {
+    height: 58px;
+    width: 58px;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    // filter: invert(100%);
+  }
+}
+
+// sf7 intro
+.sf7intro-bg {
+  position: absolute;
+  background-position: left center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.vehicles-sf7-text {
+  position: absolute;
+  top: 13%;
+  left: 12%;
+  width: 31%;
+  text-align: center;
+
+  h2, p {
+    color: #fff;
+  }
+}
+
+// sf5 intro
+.sf5intro-bg {
+  position: absolute;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.vehicles-sf5-text {
+  position: absolute;
+  top: 14%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 37%;
+  text-align: center;
+
+  h2, p {
+    color: #000
+  }
+}
+
+// galleries (shared SF7 & SF5)
+.image-viewer {
+  padding: 0;
+  margin: 0px;
+}
+
+.vertical-carousel-wrapper {
+  overflow: hidden;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.vertical-image-wrapper {
+  height: 100vh;
+  overflow-y: scroll;
+  padding-left: 0;
+  padding-right: 0;
+
+  .gal-image {
+    height: 33.33vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.gallery-image {
+  flex: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.gallery-section-thumbnails {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.sf7ExpandImage,
+.sf5ExpandImage {
+  @include transition-mix($duration: 0.3s);
+  height: 100vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// Gallery thumbnail scroll buttons not currently in use
+// .scroll-button {
+//   position: absolute;
+//   font-size: 41px;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-color: transparent;
+//   display: block;
+//   border: none;
+//   padding: 0px;
+//   width: 60px;
+//   height: 60px;
+//   color: inherit;
+//   left: 45%;
+//   -webkit-transform: translateX(-50%);
+//   transform: translateX(-50%);
+//   &.up {
+//     top: 20px;
+//   }
+//   &.down {
+//     bottom: 0;
+//   }
+//   &:focus {
+//     outline: none;
+//   }
+// }
+
+// responsive
+@media only screen and (max-width: $responsive) {
+  // general ≥ 767px
+  .dsktp-resp-bg {
+    display: none;
+  }
+
+  .mobile-resp-bg {
+    display: block;
+  }
+
+  // hero ≥ 767px
+  .hero-bg {
+    background-position: center center;
+  }
+
+  .hero-content {
+    position: absolute;
+    top: 15%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    .vehicles-video-cta {
+      position: absolute;
+      bottom: 8%;
+    }
+
+    h1, #video-player-text {
+      color: #fff;
+      margin: 0;
+    }
+
+    p {
+      padding: 0 5%;
+    }
+
+    #video-player-btn {
+      // filter: invert(100%);
+      height: 35px;
+      width: 35px;
+    }
+  }
+
+  // sf7 intro ≥ 767px
+  .sf7intro-bg {
+    background-position: center center;
+  }
+
+  .vehicles-sf7-text {
+    top: 13%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    p {
+      position: absolute;
+      bottom: 3%;
+      left: 5%;
+      right: 5%;
+    }
+  }
+
+  // sf5 intro ≥ 767px
+  .vehicles-sf5-text {
+    top: 5%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: none;
+
+    p {
+      position: absolute;
+      top: 13%;
+      left: 5%;
+      right: 5%;
+    }
+  }
+
+  // sf7 & sf5 mobile galleries ≥ 767px
+  .fp-slide {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  // custom bg image positioning for the SPECIFIC mobile gallery images (full height sections)
+  // #mobile-gallery-sf7 {
+  //   .fp-slidesContainer {
+  //     .slide:first-child {
+  //       background-position: 5% center;
+  //     }
+  //     .slide:nth-child(2) {
+  //       background-position: 58% center;
+  //     }
+  //     .slide:nth-child(3) {
+  //       background-position: 80% center;
+  //     }
+  //   }
+  // }
+
+  // #mobile-gallery-sf5 {
+  //   .fp-slidesContainer {
+  //     .slide:first-child {
+  //       background-position: 55% center;
+  //     }
+  //     .slide:nth-child(2) {
+  //       background-position: 58% center;
+  //     }
+  //     .slide:nth-child(3) {
+  //       background-position: 55% center;
+  //     }
+  //   }
+  // }
+
+  .fp-controlArrow.fp-prev {
+    opacity: 0.7;
+    left: 14px;
+    border-width: 17px 17px 17px 0;
+  }
+
+  .fp-controlArrow.fp-next {
+    opacity: 0.7;
+    right: 14px;
+    border-width: 17px 0 17px 17px;
+  }
+
+} // end @media only screen and (max-width: 767px)
+
+@media only screen and (max-height: $landscape) {
+  #vehicles-hero {
+    height: 110vmax !important;
+  }
+
+  #vehicles-sf7 {
+    height: 100vmax !important;
+  }
+
+  #vehicles-sf5 {
+    height: 100vmax !important;
+  }
+
+  // sf7 intro ≥ 767px & landscape
+  .sf7intro-bg {
+    background-position: center 65%;
+  }
+
+  .vehicles-sf7-text {
+    top: 5%;
+  }
+}
+
+@media only screen and (min-width: $above-responsive) {
+  // general
+  .dsktp-resp-bg {
+    display: block;
+  }
+
+  .mobile-resp-bg {
+    display: none;
+  }
+
+  //sf7 gallery
+  // #gallery-sf7 {
+  //   .vertical-image-wrapper .gal-image:first-child {
+  //     background-size: 142%;
+  //     background-position: left center;
+  //   }
+  //   .vertical-image-wrapper .gal-image:nth-child(3) {
+  //     // doesn't survive tablet sizing
+  //     background-size: 175%;
+  //     // background-size: auto 100%;
+  //     background-position: 66% 70%;
+  //   }
+  // }
+
+  //sf5 gallery
+  // #gallery-sf5 {
+  //   .vertical-image-wrapper .gal-image:nth-child(3) {
+  //     // doesn't survive tablet sizing
+  //     background-size: 180%;
+  //     // background-size: auto 180%;
+  //     background-position: 11% 56%;
+  //   }
+  // }
+
+  @media only screen and (max-width: 1400px) {
+    //hero
+    .hero-bg {
+      background-position: center center;
+    }
+
+    @media only screen and (max-width: 991px) {
+      //hero
+      .hero-content {
+        top: 15%;
+        right: 0%;
+        width: 45%;
+      }
+
+      @media only screen and (max-height: 576px) and (orientation: landscape) {
+        //hero
+        .hero-content {
+          top: 10%;
+        }
+
+        .hero-content #video-player-btn {
+          height: 35px;
+          width: 35px;
+        }
+      } //end @media only screen and (max-height: 576px)
+    } // end @media only screen and (max-width: 991px)
+    @media only screen and (min-width: 992px) {
+      //hero
+      .hero-content {
+        top: 25%;
+        right: 2%;
+        width: 50%;
+      }
+    } // end @media only screen and (min-width: 992px)
+  } // end @media only screen and (max-width: 1400px)
+} // end @media only screen and (min-width: 768px)
+
+@media only screen and (min-width: 1600px) {
+  // sf7 intro
+  .vehicles-sf7-text {
+    width: 28%;
+  }
+
+  // sf5 intro
+  .vehicles-sf5-text {
+    width: 30%;
+  }
+} // end @media only screen and (min-width: 1600px)

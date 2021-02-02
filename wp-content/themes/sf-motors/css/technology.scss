@@ -1,0 +1,169 @@
+@import "./_mixins.scss";
+@import "./_video_modal.scss";
+@import "./_typography_2019.scss";
+
+$phone: 474px;
+$landscape: 474px;
+$xl-screen: 1500px;
+$large-tablet: 1030px;
+$large-portrait: 1000px;
+
+$above-phone: $phone + 1px;
+$above-landscape: $landscape + 1px;
+$above-xl-screen: $xl-screen + 1px;
+
+.mobile-background, .desktop-background{
+  display:none;
+  @include bg-centered-covered;
+  @include fill-parent;
+}
+.animation-container, .animation-frame{
+  @include fill-parent;
+  @include dead-center-item;
+}
+.animation-frame{
+  @include bg-centered-contained;
+  opacity: 0;
+}
+.animation-container{
+  &.desktop, &.mobile{display: none;}
+}
+
+.section-2 .animation-container{
+  background-color: #FFF;
+}
+
+.title-group{
+  @include dead-center-x-axis;
+  top: 0;
+  text-align: center;
+}
+
+.cta-button{
+  width: 58px;
+  height: 58px;
+  cursor: pointer;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.hero{
+  .title-group{
+    top: 20%;
+    width: 80%;
+    h1{
+      color: #000;
+    }
+  }
+  .copy-group{
+    @include dead-center-x-axis;
+    bottom: 53%;
+    h3{
+      text-align: center;
+    }
+    .cta-button{
+      margin: 0 auto;
+    }
+  }
+}
+.section-1, .section-2, .section-3{
+  .cta-button{
+    @include dead-center-item;
+    z-index: 10;
+  }
+}
+
+.section-2 .cta-button{ top: 35%; }
+
+.section-3 {
+  .title-group{
+    top: 10vh;
+  }
+  h2.sf-heading, h3{
+    color: #fff;
+  }
+}
+
+@media only screen and (max-width: $phone){
+  .mobile-background{ display: block; }
+  .animation-container.mobile{display:block;}
+  .section-1 .animation-container{
+    background-color: #fdfdfd;
+  }
+  .hero{
+    .title-group{
+      top: 10%;
+    }
+    .copy-group{
+      bottom: 56%;
+      width: 80%;
+
+      .cta-button{
+        filter: invert(100);
+        height: 35px;
+        width: 35px;
+      }
+    }
+  }
+
+  .section-2 .cta-button{ top: 37%; }
+  .section-3{
+    .title-group{
+      width: 80%;
+    }
+    .cta-button{
+      top: 75vh;
+    }
+  }
+}
+@media only screen and (max-height: $landscape){
+  .hero .copy-group {bottom: 52%;}
+  .cta-button{
+    height: 35px;
+    width: 35px;
+  }
+  .section-3{
+    .cta-button{
+      top: 75vh;
+    }
+  }
+}
+
+@media only screen and (min-width: $above-phone) {
+  .desktop-background{ display:block; }
+  .animation-container.desktop{display:block;}
+  .section-1 .animation-container{
+    background-color: #F9F7FA;
+  }
+  .section-3 .title-group{ width: 65%; }
+}
+
+@media only screen and (min-width: $above-phone) and (min-height: $above-landscape) and (max-width: $xl-screen){
+  .hero .copy-group .cta-button { margin-top: 5vh; }
+}
+
+// tablet consideration for section-1, chassis displays better vertically in portrait
+@media only screen and (max-width: $large-tablet) and (min-height: $large-portrait){
+  .section-1{
+    .desktop-background { display:none; }
+    .mobile-background { display:block; }
+  }
+  .animation-container{
+    &.mobile{display:block;}
+    &.desktop{display:none;}
+  }
+
+  .section-1 .animation-container{
+    background-color: #fdfdfd;
+  }
+}
+
+@media only screen and (min-width: $above-xl-screen) {
+  .hero {
+    .copy-group{
+      .cta-button{
+        margin-top: 5vh;
+      }
+    }
+  }
+}

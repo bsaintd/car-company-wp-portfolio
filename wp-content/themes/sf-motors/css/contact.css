@@ -1,0 +1,205 @@
+/*CONTACT PAGE*/
+
+body {
+  background-color: whitesmoke;
+  background: url("/wp-content/uploads/2018/11/contact-background.jpg") no-repeat;
+  background-size: cover;
+  height: auto;
+}
+
+#content {
+  padding-bottom: 2em;
+  min-height: 100vh;
+}
+
+#contact-sales {
+  margin-bottom: 1em;
+}
+
+#contact-sales h5 {
+  text-transform: capitalize;
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+#contact-sales p {
+  font-size: 0.9em;
+  font-weight: 700;
+  margin: 0em;
+  padding: 0em;
+}
+
+#contact-form input,
+#contact-form select {
+  height: 2.1em;
+  width: 100%;
+  border: none;
+  margin-bottom: 1em;
+  padding-left: 0.5em;
+  border-radius: 3px;
+}
+
+#contact-form textarea {
+  padding: 0.5em;
+}
+
+#contact-form #user-contact {
+  padding: 5px;
+  background: #1d2951;
+}
+
+#contact-form #user-contact h5 {
+  color: white;
+  padding-left: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+#contact-form #user-contact label {
+  font-size: 1rem;
+  color: white;
+}
+
+#contact-form #user-contact option {
+  color: black;
+}
+
+#contact-form #contact-pref label {
+  display: block;
+}
+
+#contact-form .contact-inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#contact-form .contact-inputs div {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+#contact-form #contact-topic label {
+  display: block;
+}
+
+#contact-form #contact-comments textarea {
+  height: 18vh;
+  width: 100%;
+  border-radius: 5px;
+}
+
+#contact-form #contact-footer p {
+  font-size: 1rem;
+  color: white;
+  margin-left: 1em;
+}
+
+#contact-form #contact-footer button {
+  -ms-flex-item-align: center;
+  align-self: center;
+  background-color: #6495ed;
+  height: 30px;
+  width: 95%;
+  border-radius: 2px;
+  margin-top: 0.5em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  padding: 8px 16px 8px 16px;
+  font-size: 0.9em;
+}
+
+@media only screen and (min-width: 768px) {
+  .contact-inputs {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .contact-inputs div:first-child {
+    padding-right: 1em;
+  }
+
+  #contact-footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  #contact-footer div {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  #contact-footer div:first-child {
+    -webkit-box-flex: 4;
+    -ms-flex: 4;
+    flex: 4;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .contact-inputs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 434px) {
+  #contact-form select {
+    width: 100%;
+  }
+
+  #contact-form #contact-footer p {
+    margin: 0 auto;
+    width: 93%;
+  }
+
+  #contact-sales h5 {
+    font-size: 1.1em;
+  }
+
+  #contact-sales p {
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  #contact-form #contact-footer p {
+    margin-left: 1.5em;
+  }
+}
+
+@media only screen and (min-width: 739px) and (max-width: 767px) {
+  #contact-form #contact-footer p {
+    margin-left: 1.5em;
+    margin-top: 0.2em;
+    margin-bottom: 0em;
+  }
+}
+
+@media only screen and (min-width: 613px) and (max-width: 738px) {
+  #contact-form #contact-footer p {
+    margin-left: 1.5em;
+    margin-top: 0.2em;
+    margin-bottom: 0em;
+  }
+}
+
+@media only screen and (min-width: 435px) and (max-width: 612px) {
+  #contact-form #contact-footer p {
+    margin-left: 1.5em;
+    margin-top: 0.2em;
+    margin-bottom: 0em;
+  }
+}

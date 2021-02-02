@@ -1,0 +1,244 @@
+@import "./_mixins.scss";
+@import "./_nav.scss";
+@import './_global-sidenav.scss';
+@import './_footer.scss';
+
+/*Import Fonts*/
+@font-face {
+    font-family: 'Nanami-XLT-Oblique';
+    src: url('../fonts/NanamiExtraLightOblique.otf') format('opentype');
+}
+
+// @font-face {
+//     font-family: 'Luxury-Platinum';
+//     src: url('../fonts/Luxury-Platinum.otf') format('opentype');
+// }
+
+@font-face {
+    font-family: 'Forza-Thin';
+    src: url('../fonts/Forza-Thin.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Forza-Book';
+    src: url('../fonts/Forza-Book.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'ClanOffc-Thin';
+    src: url('../fonts/ClanOffc-Thin.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ClanOffc-Book';
+    src: url('../fonts/ClanOffc-Book.ttf') format('truetype');
+}
+
+html, body {
+    font-family: 'ClanOffc-Thin', sans-serif !important;
+    background-color: #000;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+// hide the fullpage elements until they are loaded.
+#fullpage{
+    opacity: 0;
+}
+
+// anti aliasing
+h1, h2, h3, h4, h5, h6, p {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$base-font: 1em;
+
+/* h1 used only for main page title*/
+h1 {
+    font-family: 'Luxury-Platinum', Arial, sans-serif;
+    letter-spacing: 2.5rem;
+    padding-left: 6rem;
+    font-size: 6rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    padding-top: 10rem;
+    color: white;
+}
+/*h2 used for page section titles*/
+h2 {
+    letter-spacing: 2.6rem;
+    font-size: 4rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    padding-top: 7rem;
+    color: black;
+}
+/* h3 used for subtitles in tech page */
+h3 {
+    letter-spacing: .4rem;
+    font-size: 1.9rem;
+    text-transform: uppercase;
+}
+
+h4 {
+    text-transform: uppercase;
+}
+
+/* h5 used for titles for paragraphs*/
+h5 {
+    text-transform: uppercase;
+    color: black;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+p {
+    font-size: 2rem;
+    line-height: 1.75;
+}
+
+button, .button {
+    background-color: #1D2951;
+    color: white;
+    padding: 14px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border: none;
+}
+
+section{
+    // width:100%;
+    overflow-x: hidden;
+}
+
+// universal positioning utility classes
+
+.bg-centered{
+  @include bg-centered;
+}
+
+.fullscreen-item{
+  @include fullscreen-item;
+}
+
+.dead-center-container{
+  @include dead-center-container;
+}
+
+.dead-center-item{
+  @include dead-center-item;
+}
+
+.hidden{
+    /*@include transition-mix($duration: .3s);*/
+    /*visibility: hidden;*/
+   /* *{
+        @include transition-mix($duration: .3s);
+    }*/
+}
+
+.ice-plexus-arrow {
+    width: 100%;
+    opacity: 0.7;
+}
+
+.freeze{
+    overflow: hidden !important;
+}
+
+p#signup-result{
+    background: rgba(0,255,0,.15);
+    text-align: center;
+    font-size: 14px;
+    width: 50%;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 424px) {
+    h1 {
+        letter-spacing: .5rem;
+        padding-left: .5rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 571px) {
+    h1 {
+        letter-spacing: .7rem;
+        padding-left: 1rem;
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (min-width: 572px) and (max-width: 799px) {
+    h1 {
+        letter-spacing: 1.2rem;
+        padding-left: 1rem;
+        font-size: 2.2rem;
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 990px) {
+    h1 {
+        letter-spacing: 2rem;
+        padding-left: 2rem;
+        font-size: 3.2rem;
+    }
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1049px) {
+    h1 {
+        letter-spacing: 2.2rem;
+        padding-left: 2rem;
+        font-size: 4rem;
+    }
+}
+
+@media only screen and (min-width: 1050px) and (max-width: 1280px) {
+    h1 {
+        letter-spacing: 2.5rem;
+        padding-left: 1.5rem;
+        font-size: 4rem;
+    }
+}
+
+@media only screen and (min-width: 1281px) {
+    h1 {
+        letter-spacing: 3rem;
+        padding-left: 2rem;
+        font-size: 5rem;
+    }
+
+    p {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 1650px) {
+    h1 {
+        letter-spacing: 3.3rem;
+        padding-left: 2.2rem;
+        font-size: 7rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    body{
+        overflow-x: hidden !important;
+    }
+
+    h2 {
+        letter-spacing: 1.5rem;
+        font-size: 3rem;
+        padding-left: 1.6rem;
+    }
+    .nav-blur{
+        @include transition-mix($duration: .3s);
+        filter: blur(5px);
+    }
+}
+

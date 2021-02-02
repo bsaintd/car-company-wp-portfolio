@@ -1,0 +1,156 @@
+@import "./_mixins.scss";
+
+$phone: 475px;
+$responsive: 767px;
+
+$above-phone: $phone + 1px;
+$above-responsive: $responsive + 1px;
+
+.mfp-fade.mfp-bg.mfp-ready{
+  opacity: 0 !important;
+}
+.mapplic-hovertip h4.mapplic-tooltip-title{
+  text-align: left !important;
+  font-family: 'ClanOffc-Book', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 12px !important;
+  line-height: 16px !important;
+  color: #ccc !important;
+}
+// responsive
+@media only screen and (max-width: $responsive) {
+  .sfm-map-container{display:none;}
+}
+
+@media only screen and (max-height: 45vw) {
+  .sfm-map-container{display:none;}
+}
+
+@media only screen and (min-width: $above-responsive) and (min-height: $above-phone) {
+  // #section-3{
+  //   min-height: 48vw;
+  //   max-height: 63vw;
+  // }
+
+
+  .mfp-close{
+    color: #333;
+    line-height: 33px !important;
+    position: absolute !important;
+    top: -15px !important;
+    right: -15px !important;
+    background-color: white !important;
+    opacity: 1 !important;
+    border-radius: 15px !important;
+    height: 30px !important;
+    width: 30px !important;
+  }
+  .mapplic-map{
+    top: 0 !important;
+  }
+  .mapplic-tooltip{
+    background-color: rgba(6,118, 161, .7) !important;
+    text-align: left;
+    color: white;
+    .mapplic-tooltip-title{
+      color: white;
+    }
+    .mapplic-hovertip h4.mapplic-tooltip-title{
+      text-align: left !important;
+    }
+    .mapplic-tooltip-triangle{
+      border-color: rgba(6,118, 161, .7) transparent transparent transparent !important;
+    }
+  }
+  .mapplic-lightbox{
+    box-shadow: 1px 1px 3px rgba(7, 27, 53, 0.2),
+    -1px -1px 3px rgba(7, 27, 53, 0.2), -1px 1px 3px rgba(7, 27, 53, 0.2),
+    1px -1px 3px rgba(7, 27, 53, 0.2);
+    img{
+      position: absolute;
+      left: 2vh;
+      top: 2vh;
+      width: 36vw;
+    }
+    .location-image{
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      background-size:cover;
+      background-position: center;
+      width: 40vw;
+      height: calc(100% - 20px);
+    }
+  }
+
+  .mapplic-lightbox{
+    width: unset;
+    max-width: unset !important;
+    width: 75vw !important;
+    height: 50vh;
+    h2 {
+      font-size: 14px;
+    }
+    p {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+
+  .mapplic-lightbox-title {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 0 !important;
+    width: 30vw;
+    margin-left: auto;
+  }
+  .mapplic-lightbox-description {
+    width: 30vw;
+    margin-left: auto;
+    p.city{
+      border-bottom: 1px solid #ccc;
+    }
+  }
+
+  .mapplic-element, .mapplic-container, .sfm-map-container{
+    height: 55vw !important;
+  }
+
+  .sfm-map-container{
+    @include dead-center-item;
+    top: 45%;
+    width: 100%;
+    max-width: 1600px;
+    max-height: 750px;
+    margin: 0 auto;
+    svg{
+      max-width:100vw;
+      max-height:100vh;
+    }
+    svg g{
+      fill: #061b36;
+        stroke: #6b96d4;
+        stroke-width: 12px;
+    }
+  }
+
+} // end (min-width: 768px)
+
+@media only screen and (min-width: 991px){
+  .mapplic-lightbox{
+    .location-image{
+      width: 36vw;
+    }
+  }
+
+  .mapplic-lightbox{
+    width: 60vw !important;
+  }
+
+  .mapplic-lightbox-title {
+    width: 20vw;
+  }
+  .mapplic-lightbox-description {
+    width: 20vw;
+  }
+}

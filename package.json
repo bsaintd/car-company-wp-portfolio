@@ -1,0 +1,30 @@
+{
+  "name": "sfmotors-wp",
+  "version": "1.0.0",
+  "description": "WordPress conversion of SFMotors.com (Fall 2018)",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fueledonbacon/sfmotors-wp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fueledonbacon/sfmotors-wp/issues"
+  },
+  "homepage": "https://github.com/fueledonbacon/sfmotors-wp#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.3.1",
+    "browser-sync": "^2.26.3",
+    "gulp": "3.9.1",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2"
+  },
+  "dependencies": {}
+}

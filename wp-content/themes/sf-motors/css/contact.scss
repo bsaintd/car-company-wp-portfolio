@@ -1,0 +1,221 @@
+/*CONTACT PAGE*/
+body {
+  background-color: whitesmoke;
+  background: url("/wp-content/uploads/2018/11/contact-background.jpg") no-repeat;
+  background-size: cover;
+  height: auto;
+}
+
+#content {
+  padding-bottom: 2em;
+  min-height: 100vh;
+}
+
+#contact-sales {
+  margin-bottom: 1em;
+  h5 {
+    text-transform: capitalize;
+    font-size: 1.3em;
+    font-weight: 700;
+  }
+  p {
+    font-size: 0.9em;
+    font-weight: 700;
+    margin: 0em;
+    padding: 0em;
+  }
+}
+
+#contact-form {
+  input,
+  select {
+    height: 2.1em;
+    width: 100%;
+    border: none;
+    margin-bottom: 1em;
+    padding-left: 0.5em;
+    border-radius: 3px;
+  }
+
+  textarea {
+    padding: 0.5em;
+  }
+
+  #user-contact {
+    padding: 5px;
+    background: #1d2951;
+    h5 {
+      color: white;
+      padding-left: 10px;
+      padding-top: 6px;
+      padding-bottom: 6px;
+    }
+    label {
+      font-size: 1rem;
+      color: white;
+    }
+    option {
+      color: black;
+    }
+  }
+  #contact-pref {
+    label {
+      display: block;
+    }
+    select {
+    }
+  }
+  .contact-inputs {
+    display: flex;
+
+    div {
+      flex: 1;
+    }
+  }
+  #contact-topic {
+    label {
+      display: block;
+    }
+    select {
+    }
+  }
+  #contact-comments {
+    textarea {
+      height: 18vh;
+      width: 100%;
+      border-radius: 5px;
+    }
+  }
+  #contact-footer {
+    p {
+      font-size: 1rem;
+      color: white;
+      margin-left: 1em;
+    }
+
+    button {
+      align-self: center;
+      background-color: #6495ed;
+      height: 30px;
+      width: 95%;
+      border-radius: 2px;
+      margin-top: 0.5em;
+      margin-right: 1em;
+      margin-bottom: 1em;
+      padding: 8px 16px 8px 16px;
+      font-size: 0.9em;
+    }
+  }
+} // end contact-form
+
+@media (max-width: 1281px) {
+} // end hi-res laptops and desktops
+@media only screen and (min-width: 993px) and (max-width: 1025px) {
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  #contact-form {
+    #contact-pref {
+      select {
+      }
+    }
+    .contact-inputs {
+    }
+    #contact-topic {
+    }
+    #contact-footer {
+      p {
+        margin-left: 1.5em;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .contact-inputs {
+    flex-direction: column;
+    div {
+    }
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .contact-inputs {
+    flex-direction: row;
+    div {
+      &:first-child {
+        padding-right: 1em;
+      }
+    }
+  }
+
+  #contact-footer {
+    flex-direction: row;
+    div {
+      flex: 1;
+    }
+    div:first-child {
+      flex: 4;
+    }
+  }
+}
+
+@media only screen and (min-width: 739px) and (max-width: 767px) {
+  #contact-form {
+    #contact-footer {
+      p {
+        margin-left: 1.5em;
+        margin-top: 0.2em;
+        margin-bottom: 0em;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 613px) and (max-width: 738px) {
+  #contact-form {
+    #contact-footer {
+      p {
+        margin-left: 1.5em;
+        margin-top: 0.2em;
+        margin-bottom: 0em;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 435px) and (max-width: 612px) {
+  #contact-form {
+    #contact-footer {
+      p {
+        margin-left: 1.5em;
+        margin-top: 0.2em;
+        margin-bottom: 0em;
+      }
+    }
+  }
+}
+@media (max-width: 434px) {
+  #contact-form {
+    select {
+      width: 100%;
+    }
+    .contact-inputs {
+    }
+    #contact-footer {
+      p {
+        margin: 0 auto;
+        width: 93%;
+      }
+    }
+  }
+  #contact-sales {
+    h5 {
+      font-size: 1.1em;
+    }
+    p {
+      font-size: 0.8em;
+    }
+  }
+} // end smartphones, Android phones, landscape iPhone

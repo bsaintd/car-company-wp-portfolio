@@ -1,0 +1,596 @@
+//-------------------------------//
+// Homepage 2019 Refresh Styling //
+//-------------------------------//
+
+// imports
+@import "./_mixins.scss";
+@import "./_video_modal.scss";
+@import "./_maplicc-custom.scss";
+@import "./_typography_2019.scss";
+
+$phone: 475px;
+$responsive: 767px;
+
+$large-tablet: 1026px;
+$above-large-tablet: $large-tablet + 1px;
+
+$above-phone: $phone + 1px;
+$above-responsive: $responsive + 1px;
+
+// extend/inheritance
+%section-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+%h-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+//-------------------------------//
+// BASE STYLING @ 1440px x 769px //
+//-------------------------------//
+
+// home general
+.dsktp-bg {
+  @extend %section-bg;
+  display: block;
+}
+
+.mobile-bg {
+  @extend %section-bg;
+  display: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.cta-button {
+  // font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px;
+  margin: 35px auto 0 auto;
+  border: 2px solid;
+  border-radius: 2px;
+  text-align: center;
+  width: 65%;
+}
+a,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+}
+// hero
+#hero {
+  .title-group {
+    @extend %h-center;
+    top: 22%;
+    width: 90%;
+    text-align: center;
+
+    h1 {
+      color: #fff;
+    }
+  }
+
+  #home-video-cta {
+    @extend %h-center;
+    top: 39%;
+    display: flex;
+    align-items: center;
+
+    h3 {
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    #video-player-btn {
+      padding: 0;
+      height: 58px;
+      width: 58px;
+      cursor: pointer;
+    }
+  }
+}
+
+// section 1 - mission
+#section-1 {
+  .title-group {
+    position: absolute;
+    top: 8%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    h2{
+      color: #fff;
+    }
+    h3 {
+      text-transform: none;
+      margin: 5px 0 0;
+    }
+  }
+
+  .copy-group {
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    transform: translate(-50%, 50%);
+    text-align: center;
+    color: #fff;
+    width: 35%;
+  }
+}
+
+// Section 2 - why different
+#section-2 {
+  .dsktp-bg {
+    background-position: right center;
+  }
+
+  .section-content {
+    position: absolute;
+    width: 53%;
+    top: 16%;
+    left: 4%;
+    color: #fff;
+    text-align: center;
+    h2{
+      color: #fff;
+    }
+
+    .title-group {
+      margin-bottom: 45px;
+    }
+
+    .copy-group {
+      p {
+        width: 70%;
+        margin: 0 auto;
+      }
+
+      .cta-button {
+        margin-top: 65px;
+        width: 45%;
+      }
+    }
+  }
+}
+
+// Section 3 - map
+#section-3 {
+  overflow: hidden;
+  .section-content{
+    overflow: hidden;
+  }
+  background-image: linear-gradient(#fff, #c4c8d4);
+  .dsktp-bg {
+    display: none;
+  }
+  .mobile-accordion {
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    .inner {
+      display: none;
+      overflow: hidden;
+    }
+  }
+}
+
+// location map
+#section-3 {
+  .mobile-bg {
+    background-color: #fff;
+    background-position: top;
+    background-size: 100% auto;
+  }
+  &.expanded {
+    height: 180vmax !important;
+  }
+  transition: height 0.3s;
+  transition-timing-function: ease-in-out;
+  .mobile-accordion {
+    @include dead-center-x-axis;
+    top: 40vmax;
+    width: 90%;
+    background: #fff;
+    box-shadow: 1px 1px 3px rgba(7, 27, 53, 0.2),
+      -1px -1px 3px rgba(7, 27, 53, 0.2), -1px 1px 3px rgba(7, 27, 53, 0.2),
+      1px -1px 3px rgba(7, 27, 53, 0.2);
+    ul {
+      margin: 0;
+      border-right: 1px solid #aaa;
+      border-left: 1px solid #aaa;
+      border-top: 1px solid #aaa;
+      border-radius: 0.15em;
+      li {
+        border-bottom: 1px solid #aaa;
+        a {
+          font-family: 'ClanOffc-Book';
+          font-weight: 600;
+          width: 100%;
+          display: block;
+          color: #0c3c67;
+          padding: 0.75em;
+          .caret{
+            &.up{
+              transform: rotate(180deg);
+            }
+            display:block;
+            position: absolute;
+            right: 1em;
+            margin-top: -.75em;
+          }
+        }
+        .inner {
+          padding: 0 1em 1em 1em;
+          position: relative;
+          top: -0.5em;
+          margin: 0;
+          .location-image {
+            height: 35vmax;
+            width: 100%;
+            @include bg-centered-covered;
+          }
+        }
+      }
+      li:last-of-type {
+        border-bottom: unset;
+      }
+    }
+  }
+}
+
+// Section 4 - manufacturing
+#section-4 {
+  .section-content {
+    position: absolute;
+    width: 100%;
+    top: 34%;
+    text-align: center;
+
+    .title-group {
+      margin-bottom: 15px;
+
+      h1 {
+        color: #000;
+      }
+    }
+
+    .copy-group {
+      width: 38%;
+      margin: 0 auto;
+
+      p {
+        width: 70%;
+        margin: 0 auto;
+        color: #000;
+      }
+
+      .cta-button {
+        color: #000;
+        border-color: #000;
+        font-weight: 600;
+        margin-top: 40px;
+        width: 60%;
+      }
+    }
+  }
+}
+
+// responsive
+@media only screen and (max-width: $responsive) {
+  // general
+  .mobile-bg {
+    display: block;
+  }
+
+  .dsktp-bg {
+    display: none;
+  }
+
+  .cta-button {
+    // font-size: 12px;
+    margin: 20px auto 0 auto;
+    padding: 3px;
+    width: 85%;
+  }
+
+  @media only screen and (max-width: 350px) and (max-height: 520px){
+    #hero .title-group{ top: 13%; }
+  }
+
+  // hero
+  #hero {
+    .title-group {
+      top: 16%;
+      width: 85%;
+
+      h1:nth-child(2) {
+        margin-top: 40vh;
+      }
+    }
+
+    #home-video-cta {
+      h3 {
+        // font-size: 14px;
+      }
+
+      position: absolute;
+      top: unset;
+      left: 0%;
+      bottom: unset;
+      top: 82%;
+      transform: translateX(0);
+      display: block;
+      width: 100%;
+
+      #video-player-text {
+        text-align: center;
+        margin-right: 0;
+      }
+
+      #video-player-btn {
+        height: 35px;
+        width: 35px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  // section 1 - mission
+  #section-1 {
+    .title-group {
+      top: 6%;
+
+      h3 {
+        width: 85%;
+        margin: 15px auto;
+      }
+    }
+
+    .copy-group {
+      width: 85%;
+      bottom: 25%;
+      transform: translate(-50%, 50%);
+    }
+  }
+
+  // section 2 - why different
+  #section-2 {
+    .section-content {
+      top: 11%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+
+      .title-group {
+        margin: 0 5% 35px;
+      }
+
+      .copy-group {
+        margin: 0 auto;
+        width: 85%;
+
+        p {
+          text-align: left;
+          // font-size: 12px;
+          // line-height: 16px;
+          width: 60%;
+          margin-left: 3%;
+        }
+        .cta-button {
+          margin-top: 60px;
+          width: 85%;
+        }
+      }
+    }
+  }
+
+  // location map
+  #section-3 {
+    .mobile-accordion {
+      display: block;
+    }
+  }
+
+  // section 4 - manufacturing
+  #section-4 {
+    .section-content {
+      top: 26%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+
+      .title-group {
+        margin: 0 0 25px;
+      }
+
+      .copy-group {
+        margin: 0 auto;
+        width: 85%;
+
+        p {
+          text-align: center;
+          // font-size: 12px;
+          // line-height: 16px;
+          width: 75%;
+        }
+
+        .cta-button {
+          margin-top: 20px;
+          width: 85%;
+        }
+      }
+    }
+  }
+
+  @media only screen and (orientation: landscape) {
+    // hero
+    section#hero {
+      height: 180vh !important;
+
+      .mobile-bg {
+        background-position: center 40%;
+      }
+
+      .title-group {
+        top: 12%;
+        bottom: 0;
+        width: 100%;
+
+        h1:nth-child(2) {
+          // margin-top: 108vh;
+          position: absolute;
+          bottom: 18%;
+          left: 50%;
+          transform: translateX(-50%) !important;
+          width: 100%;
+        }
+      }
+
+      #home-video-cta {
+        bottom: 4%;
+      }
+    }
+
+    // section 1 - mission
+    section#section-1 {
+      height: 175vh !important;
+
+      .mobile-bg {
+        background-position: center 30%;
+      }
+
+      .title-group {
+        h3 {
+          width: 100%;
+        }
+      }
+    }
+
+    // section 2 - why different
+    section#section-2 {
+      height: 105vh !important;
+    }
+
+    #section-3 {
+      height: 100vmax !important;
+    }
+
+    // section 4 - manufacturing
+    section#section-4 {
+      .mobile-bg {
+        background-position: center 22%;
+      }
+    }
+  } // end (orientation: landscape)
+} // end (max-width: 767px)
+
+// @media only screen and (min-width: $above-phone) and (min-height: 100vw){
+//   #hero{
+//     .title-group{
+//       top: 20%;
+//       h1:nth-child(2) {
+//         margin-top: 43vh;
+//       }
+//     }
+//   }
+// }
+
+@media only screen and (min-width: $above-responsive) {
+  // general
+  .mobile-bg {
+    display: none;
+  }
+
+  .dsktp-bg {
+    display: block;
+  }
+
+  #section-3 {
+    .mobile-accordion {
+      display: none;
+    }
+  }
+
+  // need this to get WMUD phone away from the text
+  @media only screen and (max-width: $large-tablet){
+    #section-2{
+      .mobile-bg {
+        display: block !important;
+      }
+      .dsktp-bg {
+        display: none;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 991px) {
+    // hero
+    #hero {
+      .title-group {
+        top: 15%;
+      }
+
+      #home-video-cta {
+        top: 33%;
+      }
+    }
+    @media only screen and (max-height: $phone) {
+      section.page-section{
+        min-height: 100vw;
+      }
+    }
+  } // end (max-width: 991px)
+
+  @media only screen and (max-height: 576px) and (orientation: landscape) {
+    // hero
+    #hero {
+      .title-group {
+        top: 12% !important;
+      }
+
+      #home-video-cta {
+        top: 30% !important;
+      }
+    }
+
+    #section-3 {
+      height: 100vmax !important;
+      .sfm-map-container {
+        display: none;
+      }
+      .mobile-bg {
+        display: block;
+      }
+      .mobile-accordion {
+        display: block;
+      }
+    }
+  } // end (max-height: 576px) and (orientation: landscape)
+
+  @media only screen and (max-width: 1100px) {
+    // section 1
+    #section-1 {
+      .copy-group {
+        width: 60%;
+
+        .cta-button {
+          width: 55%;
+        }
+      }
+    }
+  } // end (max-width: 1100px)
+} // end (min-width: 768px)
+

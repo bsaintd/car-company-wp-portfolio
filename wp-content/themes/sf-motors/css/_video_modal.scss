@@ -1,0 +1,121 @@
+@import "./_mixins.scss";
+
+$reg-btn-size: 8vmin;
+
+#video-player-panel {
+    @include transition-mix($duration: .25s);
+    @include fullscreen-item;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+
+    .play-btn,
+    .exit-btn {
+        cursor: pointer;
+        z-index: 101;
+        mix-blend-mode: exclusion;
+        @include bg-centered-covered;
+        @include transition-mix($duration: .25s);
+    }
+
+    .exit-btn {
+        @include bg-centered-covered;
+        position: absolute;
+        top: $reg-btn-size / 3;
+        right: $reg-btn-size / 3;
+        height: $reg-btn-size / 2;
+        width: $reg-btn-size / 2;
+    }
+
+    .play-btn {
+        @include dead-center-item;
+        height: $reg-btn-size;
+        width: $reg-btn-size;
+        &.active {
+            opacity: 0;
+        }
+    }
+
+    .video-wrapper{
+        @include dead-center-item;
+        width: 100%;
+        height: 100vw * 9 / 16;
+        max-height: 100vh;
+    }
+    video {
+        /* Center the video */
+        @include dead-center-y-axis;
+        /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+        width: 100%;
+        height: auto;
+    }
+
+    // This emulates background-size: cover for HTML5 video on larger landscape viewports
+    // @media only screen and (min-width: 992px) and (orientation: landscape) {
+    //     .video-wrapper {
+    //         width: 100%;
+    //         height: 100%;
+    //     }
+    //     video {
+    //         @include dead-center-item;
+    //         min-width: 100%;
+    //         min-height: 100%;
+    //         height: auto;
+    //         width: auto;
+    //     }
+    // }
+}
+
+#video-player-text {
+    color: white;
+    padding: 10px;
+    margin-right: 1em;
+    h3 {
+        margin-bottom: 0em;
+        margin-top: 0em;
+    }
+}
+
+#video-player-btn {
+    @include transition-mix($duration: .1s);
+    @include bg-centered-covered;
+    padding: 10px;
+    text-indent: -9999px;
+    z-index: 101;
+    height: $reg-btn-size;
+    width: $reg-btn-size;
+    cursor: pointer;
+
+    &.active {
+        @include transition-mix($duration: .3s);
+        opacity: 0;
+    }
+}
+
+#video-player-panel {
+    opacity: 0;
+    background: #000;
+    visibility: hidden;
+    z-index: 1001;
+    &.active {
+        @include transition-mix($duration: .9s);
+        opacity: 1;
+        visibility: visible;
+    }
+    .machines-hero-video {
+        @include fullscreen-item;
+        iframe {
+            @include fill-parent;
+            position: absolute;
+            margin: 0;
+        }
+    }
+}
+
+#video-cta {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    @include dead-center-item;
+}

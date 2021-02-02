@@ -1,0 +1,71 @@
+
+body {
+    background-color: whitesmoke;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  h3 {
+      letter-spacing: .4rem;
+      font-size: 1.9rem;
+      text-transform: uppercase;
+  }
+  h4 {
+      font-size: 1.5rem;
+      font-weight: 600;
+  }
+  .press-timeline p {
+      font-size: 1.3rem;
+      margin:0.5em 0;
+  }
+  h6.headline, h5.headline{
+    margin: 20px 0 10px 0;
+    font-size: 2.2rem;
+    text-transform: none;
+  }
+  .post-header h3{
+    font-size: 3rem;
+    padding-top: 1rem;
+    line-height: 1.5em;
+    letter-spacing: 3px;
+  }
+  .post-body p{
+    line-height: 2em;
+    font-size: 1.4rem;
+  }
+
+
+#content,.site{
+    background-color: whitesmoke;
+  }
+  h1{
+    padding-top:.25em;
+    font-family:'ClanOffc-Thin', sans-serif !important;
+    color:#292929;
+    font-size:2em;
+    padding-left:0;
+    letter-spacing:2px;
+  }
+  h2{
+    font-size:1em;
+    letter-spacing:1px;
+    padding-top: .25rem;
+
+}
+.sidebar-posts {
+    .sidebar-post-content{
+      padding:.5em;
+      h3{
+        font-size:1.15em;
+        line-height:1.25em;
+        margin:0;
+      }
+      hr{
+        width: 100px;
+        float: left;
+        margin:1em 0;
+      }
+      h5{
+        font-size:1em;
+      }
+    }
+}
